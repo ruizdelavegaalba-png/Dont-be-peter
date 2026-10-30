@@ -1,0 +1,19 @@
+:root {
+    --color-yellow: #F7C63C;
+    --color-wood: #E08A35;
+    --color-ink: #2A1A0E;
+    --color-paper: #F1E3C3;
+    --color-red: #C9372C;
+
+    --font-title: "Press Start 2P", monospace;
+    --font-text: "Pixelify Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-text);
+    background: var(--color-wood);
+}
+
+.screen { display: none; }
+.screen.is-active { display: block; }

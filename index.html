@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Don't Be Peter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- BARRA SUPERIOR (Alba · base) -->
+    <header class="topbar">
+    <span class="topbar__title">DON'T BE PETER · OFICINA Nº 47</span>
+    <div class="topbar__actions">
+        <button class="btn btn--secondary btn--small" id="soundButton" type="button">Sonido</button>
+        <button class="btn btn--danger btn--small" id="resetButton" type="button">Reiniciar empresa</button>
+    </div>
+    </header>
+
+    <main>
+    <!-- 01 · WELCOME (Manuel · rama welcome) -->
+    <section class="screen is-active" id="welcome"></section>
+
+    <!-- 02 · MENÚ (Brandon · rama menu) -->
+    <section class="screen" id="menu"></section>
+
+    <!-- 03 · ¿QUIÉN JUEGA HOY? (Alba · rama players) -->
+    <section class="screen" id="players"></section>
+
+    <!-- 04 · SALA (Manuel · rama room) -->
+    <section class="screen" id="room"></section>
+
+    <!-- 02a · GRAMOLA (Diego · rama jukebox) -->
+    <section class="screen" id="jukebox"></section>
+
+    <!-- 02b · TUTORIAL (Alba · rama tutorial) -->
+    <section class="screen" id="tutorial"></section>
+
+    <!-- 02c · CRÉDITOS (Brandon · rama credits) -->
+    <section class="screen" id="credits"></section>
+    </main>
+
+    <!-- 05 · AVISO y 06 · FINAL (Diego · rama alerts) -->
+    <div class="alerts" id="alerts" hidden></div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
