@@ -1,0 +1,20 @@
+.hero {
+  background: url("https://res.cloudinary.com/daul6tzck/image/upload/fl_preserve_transparency/v1794478558/Sala_isom_C3_A9trica_con_cabezas_flotantes_y_flechas_doradas_a1qcnn.jpg?_s=public-apps") 
+  center / cover no-repeat;
+  image-rendering: pixelated;
+}
+.hero__inner {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1rem 6vh;
+  box-sizing: border-box;
+}
+
+.hero__panel {
+  width: min(560px, 100%);
+  padding: 1.2rem 1.5rem 1.4rem;
+  background: color-mix(in srgb, var(--color-ink) 75%, transparent);
+  text-align: center;
+}
