@@ -25,8 +25,102 @@
     <!-- 02 · MENÚ (Brandon · rama menu) -->
     <section class="screen" id="menu"></section>
 
-    <!-- 03 · ¿QUIÉN JUEGA HOY? (Alba · rama players) -->
-    <section class="screen" id="players"></section>
+        <!-- 03 · ¿QUIÉN JUEGA HOY? (Alba · rama players) -->
+        <section class="screen playersScreen" id="players">
+            <h2 class="playersTitle">¿Quién juega hoy?</h2>
+            <div class="playersLayout">
+                <div class="playersBoard">
+                    <ul class="playersGrid">
+                        <li class="playersCard">
+                            <span class="playersPin playersPinRed"></span>
+                            <img class="playersAvatar" src="https://res.cloudinary.com/daul6tzck/image/upload/v1794478516/image_14_kds4bu.png" alt="Brandon">
+                            <p class="playersName">Brandon</p>
+                            <button class="playersRemove" type="button">
+                                <img class="playersIcon" src="assets/icons/trash.svg" alt="">
+                                Quitar
+                            </button>
+                        </li>
+                        <li class="playersCard">
+                            <span class="playersPin playersPinBlue"></span>
+                            <img class="playersAvatar" src="https://res.cloudinary.com/daul6tzck/image/upload/v1794478518/image_12_gcoe6m.png" alt="Alba">
+                            <p class="playersName">Alba</p>
+                            <button class="playersRemove" type="button">
+                                <img class="playersIcon" src="assets/icons/trash.svg" alt="">
+                                Quitar
+                            </button>
+                        </li>
+                        <li class="playersCard">
+                            <span class="playersPin playersPinGreen"></span>
+                            <img class="playersAvatar" src="https://res.cloudinary.com/daul6tzck/image/upload/v1794478518/image_11_gswpzi.png" alt="Diego">
+                            <p class="playersName">Diego</p>
+                            <button class="playersRemove" type="button">
+                                <img class="playersIcon" src="assets/icons/trash.svg" alt="">
+                                Quitar
+                            </button>
+                        </li>
+                        <li class="playersCard">
+                            <span class="playersPin playersPinPink"></span>
+                            <img class="playersAvatar" src="https://res.cloudinary.com/daul6tzck/image/upload/v1794478517/image_13_ydxvvu.png" alt="Manuel">
+                            <p class="playersName">Manuel</p>
+                            <button class="playersRemove" type="button">
+                                <img class="playersIcon" src="assets/icons/trash.svg" alt="">
+                                Quitar
+                            </button>
+                        </li>
+                        <li class="playersCard">
+                            <span class="playersPin playersPinYellow"></span>
+                            <img class="playersAvatar" src="https://res.cloudinary.com/daul6tzck/image/upload/v1794478519/image_10_kwvhio.png" alt="Julián">
+                            <p class="playersName">Julián</p>
+                            <button class="playersRemove" type="button">
+                                <img class="playersIcon" src="assets/icons/trash.svg" alt="">
+                                Quitar
+                            </button>
+                        </li>
+                        <li class="playersCard">
+                            <span class="playersPin playersPinRed"></span>
+                            <img class="playersAvatar" src="https://res.cloudinary.com/daul6tzck/image/upload/v1794478521/image_5_zkbmxn.png" alt="Paloma">
+                            <p class="playersName">Paloma</p>
+                            <button class="playersRemove" type="button">
+                                <img class="playersIcon" src="assets/icons/trash.svg" alt="">
+                                Quitar
+                            </button>
+                        </li>
+                    </ul>
+                    <p class="playersEmpty">Nadie en plantilla. Qué envidia.</p>
+                </div>
+                <aside class="playersPanel">
+                    <form class="playersForm">
+                        <label class="playersLabel" for="playerName">Nuevo fichaje</label>
+                        <input class="playersInput" id="playerName" type="text" placeholder="Nombre del candidato">
+                        <button class="playersButton" type="submit">+ Añadir a la sala</button>
+                        <p class="playersError">Ese nombre ya existe. Aquí no hay clones.</p>
+                        <p class="playersHint">Sin nombres repetidos · máximo 12</p>
+                    </form>
+                    <hr class="playersDivider">
+                    <div class="playersCount">
+                        <p class="playersLabel">En la sala</p>
+                        <div class="playersTotal">
+                            <p class="playersNumber">6</p>
+                            <p class="playersTotalText">Jugadores<br>= 5 sillas</p>
+                        </div>
+                        <div class="playersChairs">
+                            <img class="playersChair" src="assets/icons/chair.svg" alt="">
+                            <img class="playersChair" src="assets/icons/chair.svg" alt="">
+                            <img class="playersChair" src="assets/icons/chair.svg" alt="">
+                            <img class="playersChair" src="assets/icons/chair.svg" alt="">
+                            <img class="playersChair" src="assets/icons/chair.svg" alt="">
+                        </div>
+                        <p class="playersHint">Siempre hay una silla menos que jugadores.</p>
+                    </div>
+                    <button class="playersButton playersButtonLight" type="button">Cargar equipo de clase</button>
+                </aside>
+            </div>
+            <div class="playersActions">
+                <button class="playersButton playersButtonLight" type="button">← Volver</button>
+                <button class="playersButton" type="button">¡Que suene la música!</button>
+            </div>
+            <p class="playersNeed">Necesitas 2 jugadores o más para empezar</p>
+        </section>
 
     <!-- 04 · SALA (Manuel · rama room) -->
     <section class="screen" id="room"></section>

@@ -1,0 +1,294 @@
+/* 03 · ¿Quién juega hoy? (Alba · rama players) */
+
+.playersScreen {
+    background-image: url("https://res.cloudinary.com/daul6tzck/image/upload/v1794478524/Fondo2_qo4vec.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 16px;
+}
+
+.playersTitle {
+    font-family: var(--font-title);
+    font-size: 18px;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 var(--color-ink);
+    margin-bottom: 20px;
+}
+
+.playersLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.playersBoard {
+    background-color: #C99A5E;
+    border: 8px solid #B8712E;
+    outline: 3px solid var(--color-ink);
+    padding: 24px 16px;
+}
+
+.playersGrid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+}
+
+.playersEmpty {
+    display: none;
+    font-family: var(--font-text);
+    text-align: center;
+    padding: 48px 0;
+}
+
+.playersCard {
+    position: relative;
+    background-color: #FFF8E6;
+    border: 3px solid var(--color-ink);
+    box-shadow: 4px 4px 0 var(--color-ink);
+    padding: 16px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transform: rotate(-2deg);
+}
+
+.playersCard:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.playersCard:hover {
+    transform: rotate(0deg);
+}
+
+.playersPin {
+    position: absolute;
+    top: -8px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--color-ink);
+    border-radius: 50%;
+}
+
+.playersPinRed { background-color: var(--color-red); }
+.playersPinBlue { background-color: #3B6FD9; }
+.playersPinGreen { background-color: #3BA34A; }
+.playersPinPink { background-color: #F28AB2; }
+.playersPinYellow { background-color: var(--color-yellow); }
+
+.playersAvatar {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+}
+
+.playersName {
+    font-family: "Silkscreen", monospace;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: var(--color-ink);
+    color: #FFF8E6;
+    padding: 4px 10px;
+    margin: 0;
+}
+
+.playersRemove {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "Silkscreen", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    background-color: var(--color-paper);
+    border: 2px solid var(--color-ink);
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.playersRemove:hover {
+    background-color: #F5D6CC;
+}
+
+.playersIcon {
+    width: 14px;
+    height: 14px;
+}
+
+.playersPanel {
+    background-color: #2E1E12;
+    border: 3px solid #8A6A3A;
+    outline: 4px solid #1C120A;
+    color: var(--color-paper);
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.playersForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.playersLabel {
+    font-family: "Silkscreen", monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+    margin: 0;
+}
+
+.playersInput {
+    font-family: var(--font-text);
+    font-size: 15px;
+    padding: 10px 12px;
+    border: 3px solid var(--color-ink);
+    background-color: #FFF8E6;
+}
+
+.playersError {
+    display: none;
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: #FF7A6E;
+    margin: 0;
+}
+
+.playersHint {
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: #CDB894;
+    margin: 0;
+}
+
+.playersDivider {
+    border: none;
+    border-top: 2px solid #8A6A3A;
+    width: 100%;
+}
+
+.playersTotal {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.playersNumber {
+    font-family: var(--font-title);
+    font-size: 40px;
+    color: #FFF8E6;
+    margin: 0;
+}
+
+.playersTotalText {
+    font-family: var(--font-text);
+    font-size: 16px;
+    margin: 0;
+}
+
+.playersChairs {
+    display: flex;
+    gap: 16px;
+    margin: 10px 0;
+}
+
+.playersChair {
+    width: 20px;
+    height: 24px;
+}
+
+.playersButton {
+    font-family: "Silkscreen", monospace;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--color-yellow);
+    color: var(--color-ink);
+    border: 3px solid var(--color-ink);
+    box-shadow: 4px 4px 0 var(--color-ink);
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.playersButton:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.playersButton:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--color-ink);
+}
+
+.playersButtonLight {
+    background-color: #FFF1D6;
+}
+
+.playersActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.playersNeed {
+    font-family: var(--font-text);
+    font-size: 14px;
+    color: #FFF8E6;
+    text-shadow: 1px 1px 0 var(--color-ink);
+    text-align: right;
+    margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+    .playersScreen {
+        padding: 24px 32px;
+    }
+
+    .playersTitle {
+        font-size: 26px;
+    }
+
+    .playersGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .playersAvatar {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .playersScreen {
+        padding: 28px 56px;
+    }
+
+    .playersTitle {
+        font-size: 32px;
+    }
+
+    .playersLayout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .playersBoard {
+        flex: 1;
+    }
+
+    .playersPanel {
+        width: 320px;
+    }
+}
