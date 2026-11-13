@@ -1,2 +1,4 @@
 @import url("variables.css");
+@import url("jukebox.css");
+@import url("alerts.css");
 /* Cada uno añade su línea: @import url("sections/room.css"); */

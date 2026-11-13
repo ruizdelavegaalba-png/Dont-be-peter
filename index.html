@@ -32,7 +32,50 @@
     <section class="screen" id="room"></section>
 
     <!-- 02a · GRAMOLA (Diego · rama jukebox) -->
-    <section class="screen" id="jukebox"></section>
+    <section class="screen" id="jukebox">
+        <div class="jukebox__room">
+            <div class="jukebox__machine" role="group" aria-label="Gramola">
+            <div class="jukebox__now" aria-live="polite">
+            <span class="jukebox__now-label">Ahora suena</span>
+            <strong class="jukebox__now-title" id="jukebox-now-title">Stage select</strong>
+            <span class="jukebox__bars" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+            </span>
+        </div>
+            <ul class="jukebox__tracks" role="list">
+            <li>
+                <button type="button" class="jukebox__track is-active" data-track="stage-select" aria-pressed="true">
+                <span class="jukebox__key">B1</span>
+                <span class="jukebox__name">Stage select</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="jukebox__track" data-track="stage-1" aria-pressed="false">
+                <span class="jukebox__key">B2</span>
+                <span class="jukebox__name">Stage 1</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="jukebox__track" data-track="radio-8bit" aria-pressed="false">
+                <span class="jukebox__key">B3</span>
+                <span class="jukebox__name">Radio 8-bit</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="jukebox__track" data-track="random" aria-pressed="false">
+                <span class="jukebox__key">B4</span>
+                <span class="jukebox__name">Aleatoria</span>
+                </button>
+            </li>
+            </ul>
+            <nav class="jukebox__actions" aria-label="Salir de la gramola">
+            <p class="jukebox__hint">Pulsa una ficha para cambiar el disco</p>
+            <button type="button" class="jukebox__btn jukebox__btn--main" id="jukebox-back-game">Volver a la partida</button>
+            <button type="button" class="jukebox__btn" id="jukebox-back-menu">Volver al menú</button>
+            </nav>
+        </div>
+        </div>
+    </section>
 
     <!-- 02b · TUTORIAL (Alba · rama tutorial) -->
     <section class="screen" id="tutorial"></section>
@@ -42,8 +85,43 @@
     </main>
 
     <!-- 05 · AVISO y 06 · FINAL (Diego · rama alerts) -->
-    <div class="alerts" id="alerts" hidden></div>
+<div class="alerts" id="alerts" hidden>
+        <div class="alerts__layer alerts__layer--eliminated" id="alert-eliminated" hidden>
+        <div class="alerts__box" role="alertdialog" aria-modal="true"
+            aria-labelledby="alert-eliminated-title" aria-describedby="alert-eliminated-text">
+        <p class="alerts__title" id="alert-eliminated-title">
+            <span class="alerts__icon" aria-hidden="true">☠</span>
+            Ronda <span id="alert-round">1</span> · ¡Ese es Peter!
+        </p>
+        <p class="alerts__text" id="alert-eliminated-text">
+            Manuel se ha quedado sin silla. Hoy le toca ser Peter. Quedan 3.
+        </p>
+        <div class="alerts__footer">
+            <button type="button" class="alerts__btn" id="alert-next">Siguiente ronda</button>
+            <span class="alerts__cursor" aria-hidden="true">▼</span>
+        </div>
+        </div>
+    </div>
 
-    <script type="module" src="js/main.js"></script>
+    <div class="alerts__layer alerts__layer--winner" id="alert-winner" hidden>
+        <div class="alerts__box alerts__box--winner" role="alertdialog" aria-modal="true"
+            aria-labelledby="alert-winner-title" aria-describedby="alert-winner-text">
+        <p class="alerts__title" id="alert-winner-title">
+            <span class="alerts__icon" aria-hidden="true">★</span>
+            ¡Fin de la partida!
+        </p>
+        <p class="alerts__winner" id="alert-winner-name">Alba</p>
+        <p class="alerts__text" id="alert-winner-text">
+            Se queda con la última silla. ¡Tú no eres Peter!
+        </p>
+        <div class="alerts__footer">
+            <span class="alerts__count">
+            Vuelve al inicio en <strong id="alert-countdown">10</strong> s
+            </span>
+            <button type="button" class="alerts__btn" id="alert-again">Jugar otra vez</button>
+        </div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
